@@ -17,6 +17,27 @@
   <worldbody>
     <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
     <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
-    <geom name="obstacle" type="box" pos="1 1 1" size="0.1 0.1 0.1" rgba="1 0 0 1"/>
+    <geom name="obstacle" type="box" pos="5 2 0" size="0.1 0.1 0.1" rgba="1 0 0 1"/>
+
+    <!-- 要抓的物体：绿色小方块 -->
+    <body name="cube" pos="0.5 0.0 0.075">
+      <freejoint name="cube_joint"/>
+      <geom name="cube_geom" type="box" size="0.05 0.05 0.05" rgba="0 1 0 1" mass="0.1"/>
+    </body>
+
+    <!-- 第二个物体：蓝色小方块 -->
+    <body name="cube2" pos="0.5 0.2 0.075">
+      <freejoint name="cube2_joint"/>
+      <geom name="cube2_geom" type="box" size="0.05 0.05 0.05" rgba="0 0 1 1" mass="0.1"/>
+    </body>
+
+
+    <!-- 障碍物：挡在A到B的路径中间 -->
+    <body name="obstacle2" pos="0.6 0.2 0.2">
+      <geom type="box" size="0.1 0.1 0.2" rgba="1 0 0 1"/>
+    </body>
+
   </worldbody>
 </mujoco>
+
+
